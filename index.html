@@ -12,15 +12,23 @@
       color: #f5f5f5;
     }
 
-    header {
-      background: url("assets/img/logo/logo_fktk_rectangle.svg") center/cover;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+    
+  header {
+    background: #000
+      url("assets/img/logo/logo_fktk_rectangle.svg")
+      center center
+      no-repeat;
+  
+    background-size: 100% auto; /* ✅ clé ici */
+    height: 100vh;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
 
     header h1 {
       font-size: 4rem;
