@@ -4,49 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>From Kill To Kill</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
   <style>
+    /* =========================
+       BASE
+    ========================= */
+
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #0b0b0b;
-      color: #f5f5f5;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      background: #F5F5F5;
+      color: #111;
+      line-height: 1.6;
     }
 
-    
-  header {
-    background: #000
-      url("assets/img/logo/logo_fktk_rectangle.svg")
-      center center
-      no-repeat;
-  
-    background-size: 100% auto; /* ✅ clé ici */
-    height: 100vh;
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+    /* =========================
+       TYPOGRAPHIE
+    ========================= */
 
-
-    header h1 {
-      font-size: 4rem;
-      margin: 0;
-      letter-spacing: 3px;
+    h1, h2, h3, nav a, .btn {
+      font-family: "Big Shoulders", sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
-    header p {
-      font-size: 1.5rem;
-      margin-top: 10px;
-      color: #ff3c3c;
-    }
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.85);
       display: flex;
       justify-content: center;
       padding: 10px;
@@ -57,24 +52,114 @@
       color: #fff;
       margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      font-size: 0.95rem;
+      letter-spacing: 1.5px;
     }
 
     nav a:hover {
-      color: #ff3c3c;
+      color: #ff2d2d;
     }
+
+    /* =========================
+       HEADER / HERO
+    ========================= */
+
+    header {
+      background: #F5F5F5;
+      padding-top: 80px;   /* espace sous la nav */
+      padding-bottom: 20px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+
+      text-align: center;
+    }
+
+    /* Logo responsive */
+    header .logo {
+      display: block;
+      width: min(92vw, 1200px);
+      max-width: 100%;
+      height: auto;
+      max-height: 45vh;
+      object-fit: contain;
+      margin: 0 auto 12px;
+    }
+
+    /* H1 (optionnel si logo = identité principale) */
+    header h1 {
+      font-size: clamp(2rem, 6vw, 4rem);
+      letter-spacing: 4px;
+      margin: 0;
+    }
+
+    /* Tagline */
+    header p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #ff2d2d;
+      margin: 0;
+    }
+
+    /* =========================
+       BOUTON CTA
+    ========================= */
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 22px;
+      border: 2px solid #ff2d2d;
+      color: #ff2d2d;
+      background: transparent;
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #ff2d2d;
+      color: #fff;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
 
     section {
-      padding: 80px 20px;
       max-width: 1000px;
       margin: auto;
+      padding: 80px 20px;
     }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: #ff3c3c;
+    /* Bio plus proche du header */
+    #bio {
+      padding-top: 40px;
     }
+
+    /* Titres de section */
+    h2 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+      color: #ff2d2d;
+      text-align: center;
+    }
+
+    /* Texte courant */
+    section p {
+      max-width: 680px;
+      margin: auto;
+      font-size: 1rem;
+    }
+
+    /* =========================
+       GALERIE
+    ========================= */
 
     .gallery {
       display: grid;
@@ -87,30 +172,24 @@
       border-radius: 10px;
     }
 
+    /* =========================
+       CONCERTS
+    ========================= */
+
     .concert {
-      border-bottom: 1px solid #444;
+      border-bottom: 1px solid #ddd;
       padding: 10px 0;
     }
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       text-align: center;
       padding: 30px;
       background: #111;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      border: 2px solid #ff3c3c;
-      color: #ff3c3c;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #ff3c3c;
-      color: #000;
+      color: #fff;
     }
   </style>
 </head>
@@ -123,9 +202,24 @@
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- header version hero
+
 <header>
-  <h1>FROM KILL TO KILL</h1>
+  <h1> </h1>
   <p>Psychobilly • Chaos • Rock'n'Roll</p>
+  <a href="#concerts" class="btn">Voir les concerts</a>
+</header>
+*/
+-->
+
+<header>
+  <img
+    src="assets/img/logo/logo_fktk_rectangle.svg"
+    alt="From Kill To Kill"
+    class="logo"
+  >
+
+  <h1>Psychobilly - Besançon</h1>
   <a href="#concerts" class="btn">Voir les concerts</a>
 </header>
 
